@@ -21,18 +21,18 @@ public class MyController {
     @Autowired
     Environment environment;
 
-    @GetMapping("/user")
-    public String index() {
-        return new Gson().toJson(new User("Surasak", 1, "Bangkok, Thailand"));
-    }
-
     @GetMapping("/")
-    public String sayHi() {
+    public String index() {
         String port = environment.getProperty("server.port", "8080");
         String.format("App Name, %s \n", appName);
 
         return String.format("App Name: %s \n", appName)+
                 String.format(", Context Path: %s \n", contextPath)+
-                        String.format(", Running on port: %s \n", port);
+                String.format(", Running on port: %s \n", port);
+    }
+
+    @GetMapping("/user")
+    public String user() {
+        return new Gson().toJson(new User("Surasak", 1, "Bangkok, Thailand"));
     }
 }
