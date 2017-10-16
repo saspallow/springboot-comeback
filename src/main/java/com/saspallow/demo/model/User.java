@@ -1,4 +1,4 @@
-package com.saspallow.demo.demo.model;
+package com.saspallow.demo.model;
 
 public class User {
 

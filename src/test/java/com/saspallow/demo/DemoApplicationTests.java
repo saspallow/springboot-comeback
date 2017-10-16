@@ -1,4 +1,4 @@
-package com.saspallow.demo.demo;
+package com.saspallow.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

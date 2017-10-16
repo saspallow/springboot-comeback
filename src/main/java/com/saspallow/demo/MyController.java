@@ -1,7 +1,7 @@
-package com.saspallow.demo.demo;
+package com.saspallow.demo;
 
 import com.google.gson.Gson;
-import com.saspallow.demo.demo.model.User;
+import com.saspallow.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
