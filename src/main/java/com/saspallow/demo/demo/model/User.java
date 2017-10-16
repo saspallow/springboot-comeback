@@ -1,8 +1,5 @@
 package com.saspallow.demo.demo.model;
 
-/**
- * Created by dt213142 on 10/16/2017.
- */
 public class User {
 
     public User() {
