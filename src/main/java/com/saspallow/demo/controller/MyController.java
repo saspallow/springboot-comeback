@@ -1,4 +1,4 @@
-package com.saspallow.demo;
+package com.saspallow.demo.controller;
 
 import com.google.gson.Gson;
 import com.saspallow.demo.model.User;
