@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @GetMapping("/user")
-    public String user() {
+    public String getUser() {
         return new Gson().toJson(new User("Surasak", 1, "Bangkok, Thailand"));
     }
 
