@@ -35,7 +35,7 @@ public class HomeControllerTest {
 
     @Before
     public void setUp() throws Exception {
-        this.base = new URL("http://localhost:" + port + "/api/user");
+        this.base = new URL("http://localhost:" + port + "/api/user/1");
     }
 
     @Test

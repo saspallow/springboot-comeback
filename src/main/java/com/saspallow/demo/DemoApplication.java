@@ -2,13 +2,6 @@ package com.saspallow.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
-import static com.sun.org.apache.xml.internal.serialize.LineSeparator.Web;
-
 @SpringBootApplication
 public class DemoApplication {
 
