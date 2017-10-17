@@ -35,20 +35,22 @@ public class UserControllerTest {
     private UserController userController;
 
     @Test
-    public void getUser() throws Exception {
+    public void testGetUserShouldSuccess() throws Exception {
         User user = new User("Surasak", 18, "Bangkok, Thailand");
-
-        given(userController.getUser()).willReturn(new Gson().toJson(user));
+        user.setId(1L);
+        given(userController.getUser(1L)).willReturn(new Gson().toJson(user));
 
         mvc.perform(
-                    get("/user")
+                    get("/user/1")
                             .contentType(APPLICATION_JSON_UTF8_VALUE)
                 )
                 .andExpect(content().contentType(APPLICATION_JSON_UTF8_VALUE))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.username", is(user.getUsername())));
-        verify(userController, times(1)).getUser();
+        verify(userController, times(1)).getUser(1L);
         verifyNoMoreInteractions(userController);
 
     }
+
+
 }

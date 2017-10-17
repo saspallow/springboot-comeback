@@ -15,9 +15,18 @@ public class User {
         this.address = address;
     }
 
+    private long id;
     private String username;
     private int age;
     private String address;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
