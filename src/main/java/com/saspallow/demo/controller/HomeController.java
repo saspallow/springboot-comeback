@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MyController {
+public class HomeController {
 
     @Value("${server.contextPath}")
     String contextPath;
@@ -29,10 +29,5 @@ public class MyController {
         return String.format("App Name: %s \n", appName)+
                 String.format(", Context Path: %s \n", contextPath)+
                 String.format(", Running on port: %s \n", port);
-    }
-
-    @GetMapping("/user")
-    public String user() {
-        return new Gson().toJson(new User("Surasak", 1, "Bangkok, Thailand"));
     }
 }

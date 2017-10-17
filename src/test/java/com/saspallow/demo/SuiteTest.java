@@ -10,7 +10,7 @@ import org.junit.runners.Suite;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
     DemoApplicationTests.class,
-        MyControllerTest.class
+        HomeControllerTest.class
 })
 public class SuiteTest {
 }
