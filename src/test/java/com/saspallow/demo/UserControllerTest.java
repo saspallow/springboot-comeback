@@ -36,10 +36,14 @@ public class UserControllerTest {
 
     @Test
     public void testGetUserShouldSuccess() throws Exception {
+        //given
         User user = new User("Surasak", 18, "Bangkok, Thailand");
         user.setId(1L);
+
+        // when
         given(userController.getUser(1L)).willReturn(new Gson().toJson(user));
 
+        // then
         mvc.perform(
                     get("/user/1")
                             .contentType(APPLICATION_JSON_UTF8_VALUE)
