@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.embedded.LocalServerPort;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -19,7 +20,7 @@ import static org.junit.Assert.assertThat;
  * Created by dt213142 on 10/16/2017.
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class MyControllerTest {
 
     @LocalServerPort
@@ -39,7 +40,7 @@ public class MyControllerTest {
     public void getUser() throws Exception {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
-        assertThat(response.getBody(), equalTo("{\"username\":\"Surasak\",\"age\":1,\"address\":\"Bangkok, Thailand\"}"));
+        assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));
     }
 
 }
